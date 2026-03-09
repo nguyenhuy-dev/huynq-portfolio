@@ -40,12 +40,6 @@ const Projects: React.FC = () => {
                 </div>
               )}
 
-              {project.architecture && (
-                <div className="project-architecture">
-                  <strong>Architecture:</strong> {project.architecture}
-                </div>
-              )}
-
               <div className="project-tech">
                 <strong>Tech Stack:</strong>
                 <div className="skills-list" style={{ marginTop: '0.5rem' }}>
@@ -54,17 +48,6 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
               </div>
-
-              {project.libraries && (
-                <div className="project-tech" style={{ marginTop: '1rem' }}>
-                  <strong>Libraries:</strong>
-                  <div className="skills-list" style={{ marginTop: '0.5rem' }}>
-                    {project.libraries.split(',').map((lib, i) => (
-                      <span key={i} className="pill">{lib.trim()}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
 
               <a href={project.url} className="project-link" target="_blank" rel="noreferrer">
                 View Repository <ExternalLink size={18} />
